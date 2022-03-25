@@ -1,4 +1,5 @@
-<ngx-extended-pdf-viewer [src]="'assets/busted-file.pdf'" [showToolbar]="false" [handTool]="false" [textLayer]="false"
+<button (click)="swap()">Swap</button>
+<ngx-extended-pdf-viewer [src]="pdfSrc" [height]="height" [showToolbar]="false" [handTool]="false" [textLayer]="false"
     [useBrowserLocale]="true" [enablePinchOnMobile]="true" (pageRendered)="pageRendered($event)"
     (pagesLoaded)="pagesLoaded($event)" (pdfLoaded)="pdfLoaded()">
 </ngx-extended-pdf-viewer>
