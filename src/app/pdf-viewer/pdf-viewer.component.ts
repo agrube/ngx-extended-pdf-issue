@@ -10,10 +10,6 @@ export class PdfViewerComponent implements AfterContentInit {
   public title = 'issue';
   public height = 'calc(50vh - 120px)';
 
-  public zoomProperty: any = '';
-  public showSideBar = false;
-  public pageNumber: number = 0;
-
   constructor(private renderer: Renderer2) {}
 
   public ngAfterContentInit(): void {
