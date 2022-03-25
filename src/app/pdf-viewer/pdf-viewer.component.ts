@@ -33,10 +33,6 @@ export class PdfViewerComponent implements AfterContentInit {
   }
 
   pageRendered(evt: PageRenderedEvent): void {
-    const wrapper = evt.source.div.querySelector('.canvasWrapper');
-    const canvasWrapperElem = this.renderer.createElement('div') as HTMLDivElement;
-    this.renderer.addClass(canvasWrapperElem, 'pdf-form-overlay');
-    this.renderer.setAttribute(canvasWrapperElem, 'id', 'pdf-form-overlay-element-' + evt.pageNumber);
-    this.renderer.appendChild(wrapper, canvasWrapperElem);
+    console.log('Rendered');
   }
 }

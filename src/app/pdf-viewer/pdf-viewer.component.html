@@ -1,24 +1,4 @@
-<ngx-extended-pdf-viewer #viewer
-  [src]="'assets/file.pdf'"
-  [showToolbar]="false" [handTool]="false" [textLayer]="false"
-  [(zoom)]="zoomProperty" [pageViewMode]="'multiple'"
-  [customThumbnail]="dynamicThumbnail" 
-  [(page)]="pageNumber"
-  [useBrowserLocale]="true" 
-  [(sidebarVisible)]="showSideBar"
-  [enablePinchOnMobile]="true"
-  (pageRendered)="pageRendered($event)"
-  (pagesLoaded)="pagesLoaded($event)"
-  (pdfLoaded)="pdfLoaded()"
-  >
+<ngx-extended-pdf-viewer [src]="'assets/busted-file.pdf'" [showToolbar]="false" [handTool]="false" [textLayer]="false"
+    [useBrowserLocale]="true" [enablePinchOnMobile]="true" (pageRendered)="pageRendered($event)"
+    (pagesLoaded)="pagesLoaded($event)" (pdfLoaded)="pdfLoaded()">
 </ngx-extended-pdf-viewer>
-
-<ng-template #dynamicThumbnail>
-    <a class="pdf-viewer-template">
-        <div class="thumbnail">
-            <div class="thumbnailSelectionRing image-container">
-            </div>
-            <div class="d-block text-center mt-1">THUMBNAIL</div>
-        </div>
-    </a>
-</ng-template>
